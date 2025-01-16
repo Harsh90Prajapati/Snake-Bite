@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Snakebite Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100">
+    <!-- Hero Section -->
+    <section
+      class="relative bg-cover bg-center h-screen"
+      style="background-image: url('./Images/snake-bite.webp')"
+    >
+      <div class="absolute inset-0 bg-black opacity-60"></div>
+      <!-- Navbar -->
+      <nav class="absolute top-0 left-0 w-full z-20">
+        <div class="px-6 lg:px-12 py-4 flex justify-between items-center">
+          <div class="text-white text-2xl font-bold">
+            <img
+              src="./Images/GSI-logo.png"
+              alt="Snakebite-Portal"
+              class="h-10"
+            />
+          </div>
+          <div class="hidden md:flex items-center space-x-6">
+            <a href="#home" class="text-gray-200 hover:text-white">Home</a>
+            <a href="#symptoms" class="text-gray-200 hover:text-white"
+              >Symptoms</a
+            >
+            <a href="#treatment" class="text-gray-200 hover:text-white"
+              >Treatment</a
+            >
+            <a href="#prevention" class="text-gray-200 hover:text-white"
+              >Prevention</a
+            >
+            <a href="#resources" class="text-gray-200 hover:text-white"
+              >Resources</a
+            >
+            <a
+              href="#resources"
+              class="bg-red-600 hover:bg-red-500 text-white p-2 rounded-lg"
+              >Emergency</a
+            >
+          </div>
+          <!-- Mobile Menu Button -->
+          <div class="md:hidden flex items-center">
+            <button id="menu-btn" class="text-white focus:outline-none">
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-500 pb-10">
+          <a
+            href="#home"
+            class="block border-b text-gray-200 px-4 py-2 hover:bg-gray-700"
+            >Home</a
+          >
+          <a
+            href="#symptoms"
+            class="block border-b text-gray-200 px-4 py-2 hover:bg-gray-700"
+            >Symptoms</a
+          >
+          <a
+            href="#treatment"
+            class="block border-b text-gray-200 px-4 py-2 hover:bg-gray-700"
+            >Treatment</a
+          >
+          <a
+            href="#prevention"
+            class="block border-b text-gray-200 px-4 py-2 hover:bg-gray-700"
+            >Prevention</a
+          >
+          <a
+            href="#contact"
+            class="block border-b text-gray-200 px-4 py-2 hover:bg-gray-700"
+            >Contact Us</a
+          >
+          <a
+            href="#resources"
+            class="block border-b text-gray-200 px-4 py-2 hover:bg-gray-700"
+            >Resources</a
+          >
+        </div>
+      </nav>
+
+      <div
+        class="container mx-auto px-6 lg:px-12 text-center relative top-24 z-10"
+      >
+        <h1
+          class="text-white sm:text-4xl text-xl lg:text-6xl font-bold mb-4 pt-24"
+        >
+          Get Immediate Help for Snakebites
+        </h1>
+        <p class="text-gray-200 sm:text-xl text-sm lg:text-2xl mb-8">
+          Quick Response Saves Lives!
+        </p>
+        <a
+          href="#map-section"
+          class="bg-red-600 hover:bg-red-500 text-white py-3 px-6 rounded-lg sm:text-lg"
+          >Find Nearest Hospital</a
+        >
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-12">
+      <div class="container mx-auto px-6 lg:px-12">
+        <h2 class="sm:text-3xl text-xl font-bold text-center mb-8">Features</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+          <!-- Feature 1: Interactive Map -->
+          <div
+            class="bg-white shadow-lg flex flex-col items-center rounded-lg p-6 transform hover:scale-105 transition-transform duration-500 ease-in"
+          >
+            <img src="./Images/hospital.png" alt="Hospital" class="h-10" />
+            <h2 class="text-2xl font-semibold mb-4">Interactive Map</h2>
+            <p class="text-gray-700 mb-4">
+              Locate the nearest hospital with anti-venom available.
+            </p>
+            <a
+              href="#map"
+              class="bg-green-600 hover:bg-green-500 text-white py-2 px-4 rounded-lg"
+              >Explore Map</a
+            >
+          </div>
+
+          <!-- Feature 2: Emergency Hotline -->
+          <div
+            class="bg-white shadow-lg flex flex-col items-center rounded-lg p-6 transform hover:scale-105 transition-transform duration-300 ease-in-out"
+          >
+            <img src="./Images/medicine.png" alt="Hospital" class="h-10" />
+            <h2 class="text-2xl font-semibold mb-4">24/7 Emergency Hotline</h2>
+            <p class="text-gray-700 mb-4">
+              Call us for immediate snakebite assistance.
+            </p>
+            <a
+              href="tel:+18001234567"
+              class="bg-red-600 hover:bg-red-500 text-white py-2 px-4 rounded-lg"
+              >Call Now</a
+            >
+          </div>
+
+          <!-- Feature 3: Symptoms Checker -->
+          <div
+            class="bg-white shadow-lg flex flex-col items-center rounded-lg p-6 transform hover:scale-105 transition-transform duration-300 ease-in-out"
+          >
+            <img src="./Images/healthcare.png" alt="Hospital" class="h-10" />
+            <h2 class="text-2xl font-semibold mb-4">Symptoms Checker</h2>
+            <p class="text-gray-700 mb-4">
+              Check symptoms and assess the urgency of medical help.
+            </p>
+            <a
+              href="#symptoms"
+              class="bg-blue-600 hover:bg-blue-500 text-white py-2 px-4 rounded-lg"
+              >Check Symptoms</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Awareness and Education Section -->
+    <section class="bg-gray-200 py-12" id="awareness">
+      <div class="container mx-auto px-6 lg:px-12">
+        <h2 class="sm:text-3xl text-xl font-bold text-center mb-8">
+          Awareness and Education
+        </h2>
+
+        <!-- Awareness Point 1: Videos and Infographics -->
+        <div
+          class="relative flex md:flex-row items-center justify-evenly gap-3 flex-col"
+        >
+          <div class="bg-white shadow-lg rounded-lg p-6">
+            <h3 class="sm:text-2xl text-xl font-semibold mb-4 text-red-500">
+              Tips for Preventing Snakebites
+            </h3>
+            <ul class="list-disc list-inside text-gray-700">
+              <li>
+                Wear protective clothing like boots and long pants when walking
+                in high-risk areas.
+              </li>
+              <li>
+                Be cautious in snake habitats and avoid reaching into places you
+                cannot see.
+              </li>
+              <li>Stay on trails and avoid tall grass or dense brush.</li>
+              <li>
+                Do not disturb snakes; keep a safe distance if you spot one.
+              </li>
+              <li>
+                Control rodent populations around your home to discourage snakes
+                from entering.
+              </li>
+              <li>
+                Use a flashlight when walking outdoors at night to avoid
+                stepping on a snake.
+              </li>
+              <li>
+                Learn to identify venomous snakes in your region to avoid
+                dangerous encounters.
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-white shadow-lg rounded-lg p-6">
+            <h3 class="sm:text-2xl text-xl font-semibold mb-4 text-green-500">
+              Handling Emergency Situations
+            </h3>
+            <ul class="list-disc list-inside text-gray-700">
+              <li>Stay calm and try to limit movement to slow venom spread.</li>
+              <li>Call emergency services immediately for help.</li>
+              <li>
+                Keep the affected limb immobilized and at or below heart level.
+              </li>
+              <li>
+                Remove any tight clothing or jewelry near the bite area to allow
+                for swelling.
+              </li>
+              <li>
+                Do not attempt to suck out the venom or use ice on the wound.
+              </li>
+              <li>
+                Take note of the snake’s appearance or take a photo if safe to
+                do so.
+              </li>
+              <li>
+                Stay hydrated and avoid alcohol or caffeine, which can
+                accelerate venom spread.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-slate-100 md:py-10 py-32">
+      <div class="max-w-screen-xl mx-auto px-6 lg:px-12">
+        <div class="grid grid-cols-1 gap-6">
+          <!-- Awareness Point 2: Symptoms Checker -->
+          <div class="relative md:flex bg-white shadow-lg rounded-2xl p-8">
+            <div
+              class="relative md:right-20 md:bottom-0 bottom-20 bg-white p-1 rounded-lg shadow-xl"
+            >
+              <img
+                src="./Images/Snake-Bite-Blog-Feature-Image.png"
+                alt=""
+                class="rounded-lg"
+              />
+            </div>
+            <div
+              class="flex flex-col justify-center md:items-start items-center"
+            >
+              <h3 class="text-xl font-semibold mb-4 uppercase">
+                Symptoms Checker
+              </h3>
+              <p class="text-gray-700 text-thin text-sm mb-4">
+                The Symptoms Checker for snakebites is an interactive tool
+                designed to help users assess the urgency of seeking medical
+                help after a potential snakebite. By inputting symptoms such as
+                swelling, pain, dizziness, difficulty breathing, or nausea,
+                users can get a quick evaluation of the severity of their
+                condition.
+              </p>
+              <a
+                href="#symptoms-checker"
+                class="bg-green-600 hover:bg-green-500 text-white py-2 px-4 rounded-lg"
+                >Check Symptoms</a
+              >
+            </div>
+          </div>
+
+          <!-- Awareness Point 3: Snake Identification Tool -->
+          <div
+            class="relative md:flex flex flex-col md:flex-row-reverse flex-col-reverse bg-white shadow-lg rounded-2xl p-8"
+          >
+            <div
+              class="relative md:left-20 md:top-0 top-20 bg-white p-1 rounded-lg shadow-xl"
+            >
+              <img
+                src="./Images/aid345753-v4-728px-Treat-a-Snake-Bite-Step-20-Version-2.jpg"
+                alt=""
+                class="rounded-lg"
+              />
+            </div>
+            <div
+              class="flex flex-col justify-center md:items-start items-center"
+            >
+              <h3 class="text-xl font-semibold mb-4 uppercase">
+                Snake Identification Tool
+              </h3>
+              <p class="text-gray-700 text-thin text-sm mb-4">
+                The Snake Identification Tool is an interactive feature that
+                allows users to upload or view images of local snakes for easy
+                identification. This tool helps individuals recognize venomous
+                species and understand their potential risks. By comparing snake
+                images with a database of known species, users can quickly
+                determine if the snake in question poses a threat and take
+                appropriate precautions.
+              </p>
+              <a
+                href="#snake-id"
+                class="bg-red-600 hover:bg-red-500 text-white py-2 px-4 rounded-lg"
+                >Identify Snakes</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modern Snakebite Death Counter Section -->
+    <section
+      class="text-white py-6 bg-cover brightness-75"
+      style="background-image: url('./Images/snake-bite.webp')"
+    >
+      <div
+        class="max-w-screen-xl mx-auto flex md:flex-row flex-col gap-3 items-center px-6 lg:px-12 bg-gradient-to-r flex justify-between from-red-500 to-red-700 text-center py-12 rounded-lg shadow-lg my-12 mx-auto max-w-4xl"
+      >
+        <div>
+          <h2 class="md:text-4xl text-2xl font-bold text-white mb-4">
+            Snakebite Deaths in India
+          </h2>
+          <p class="md:text-lg text-sm text-red-100 mb-8">
+            Each year, snakebites cause significant fatalities across India. The
+            estimated number of deaths is:
+          </p>
+
+          <!-- Death Counter Display -->
+          <div
+            class="bg-white text-red-700 font-extrabold md:text-3xl text-xl py-6 px-12 rounded-lg inline-block shadow-xl transform hover:scale-105 transition-transform duration-300 ease-in-out"
+          >
+            <span id="death-counter">58,000</span>+
+          </div>
+
+          <p class="text-red-200 mt-4 sm:text-sm text-xs">
+            This figure is based on recent studies and highlights the critical
+            importance of awareness and emergency preparedness.
+          </p>
+        </div>
+
+        <div>
+          <img src="./Images//map.jpg" alt="" class="h-60 rounded" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Photos and Posters Section -->
+    <section class="bg-white py-20" id="photos-posters-section">
+      <div class="container mx-auto px-6 lg:px-12">
+        <h2 class="md:text-3xl text-xl font-bold text-center mb-4">
+          Photos and Posters
+        </h2>
+        <p class="text-center ms:text-lg text-sm text-gray-600 mb-8">
+          Browse through photos and posters that raise awareness about snakebite
+          prevention, treatment, and emergency response.
+        </p>
+
+        <!-- Image Grid -->
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+        >
+          <!-- Example Image 1 -->
+          <div class="relative group">
+            <img
+              src="Images/1.jpg"
+              alt="Snakebite Awareness Poster 1"
+              class="w-full h-64 object-cover rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 ease-in-out"
+            />
+            <div
+              class="absolute inset-0 bg-black opacity-0 group-hover:opacity-60 transition-opacity duration-300 ease-in-out rounded-lg"
+            ></div>
+            <p
+              class="absolute inset-x-0 bottom-2 text-center text-white font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            >
+              Awareness Poster 1
+            </p>
+          </div>
+
+          <!-- Example Image 2 -->
+          <div class="relative group">
+            <img
+              src="./Images/2.jpg"
+              alt="Snakebite Awareness Poster 2"
+              class="w-full h-64 object-cover rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 ease-in-out"
+            />
+            <div
+              class="absolute inset-0 bg-black opacity-0 group-hover:opacity-60 transition-opacity duration-300 ease-in-out rounded-lg"
+            ></div>
+            <p
+              class="absolute inset-x-0 bottom-2 text-center text-white font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            >
+              Awareness Poster 2
+            </p>
+          </div>
+
+          <!-- Example Image 3 -->
+          <div class="relative group">
+            <img
+              src="Images/3.jpg"
+              alt="Snakebite Prevention Photo"
+              class="w-full h-64 object-cover rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 ease-in-out"
+            />
+            <div
+              class="absolute inset-0 bg-black opacity-0 group-hover:opacity-60 transition-opacity duration-300 ease-in-out rounded-lg"
+            ></div>
+            <p
+              class="absolute inset-x-0 bottom-2 text-center text-white font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            >
+              Prevention Photo
+            </p>
+          </div>
+
+          <!-- Example Image 4 -->
+          <div class="relative group">
+            <img
+              src="Images/4.jpg"
+              alt="Snakebite Awareness Poster 3"
+              class="w-full h-64 object-cover rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 ease-in-out"
+            />
+            <div
+              class="absolute inset-0 bg-black opacity-0 group-hover:opacity-60 transition-opacity duration-300 ease-in-out rounded-lg"
+            ></div>
+            <p
+              class="absolute inset-x-0 bottom-2 text-center text-white font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            >
+              Awareness Poster 3
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Snakebite Form Section -->
+<section class="bg-gray-100 py-16" id="snakebite-form-section">
+  <div class="container mx-auto px-6 lg:px-12">
+    <h2 class="md:text-3xl text-xl font-bold text-center mb-8">Report a Snakebite Incident or Get Help</h2>
+    <p class="text-center sm:text-lg text-sm text-gray-600 mb-8">Fill out the form below if you or someone you know has encountered a snakebite. This helps us provide proper guidance and emergency assistance.</p>
+
+    <!-- Form Container -->
+    <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-xl p-8">
+
+      <!-- Form Start -->
+      <form action="#" method="POST" class="space-y-6">
+
+        <!-- Name Field -->
+        <div class="flex flex-col">
+          <label for="name" class="font-semibold text-gray-700">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="Your Full Name" class="mt-2 p-4 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent">
+        </div>
+
+        <!-- Email Field -->
+        <div class="flex flex-col">
+          <label for="email" class="font-semibold text-gray-700">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="your.email@example.com" class="mt-2 p-4 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent">
+        </div>
+
+        <!-- Location Field -->
+        <div class="flex flex-col">
+          <label for="location" class="font-semibold text-gray-700">Location</label>
+          <input type="text" id="location" name="location" placeholder="City, State" class="mt-2 p-4 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent">
+        </div>
+
+        <!-- Symptoms Checklist -->
+        <div class="flex flex-col">
+          <label class="font-semibold text-gray-700 mb-2">Symptoms (check all that apply)</label>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="flex items-center">
+              <input type="checkbox" id="pain" name="symptoms[]" value="Severe Pain" class="h-5 w-5 text-red-600 focus:ring-red-600 border-gray-300 rounded">
+              <label for="pain" class="ml-3 text-gray-700">Severe Pain</label>
+            </div>
+            <div class="flex items-center">
+              <input type="checkbox" id="swelling" name="symptoms[]" value="Swelling" class="h-5 w-5 text-red-600 focus:ring-red-600 border-gray-300 rounded">
+              <label for="swelling" class="ml-3 text-gray-700">Swelling</label>
+            </div>
+            <div class="flex items-center">
+              <input type="checkbox" id="nausea" name="symptoms[]" value="Nausea" class="h-5 w-5 text-red-600 focus:ring-red-600 border-gray-300 rounded">
+              <label for="nausea" class="ml-3 text-gray-700">Nausea</label>
+            </div>
+            <div class="flex items-center">
+              <input type="checkbox" id="blurred-vision" name="symptoms[]" value="Blurred Vision" class="h-5 w-5 text-red-600 focus:ring-red-600 border-gray-300 rounded">
+              <label for="blurred-vision" class="ml-3 text-gray-700">Blurred Vision</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Snake Identification Upload -->
+        <div class="flex flex-col">
+          <label for="snake-image" class="font-semibold text-gray-700">Upload Snake Photo (optional)</label>
+          <input type="file" id="snake-image" name="snake-image" accept="image/*" class="mt-2 p-4 border-2 border-dashed border-gray-300 rounded-lg text-gray-600">
+        </div>
+
+        <!-- Emergency Level -->
+        <div class="flex flex-col">
+          <label for="emergency-level" class="font-semibold text-gray-700">Emergency Level</label>
+          <select id="emergency-level" name="emergency-level" class="mt-2 p-4 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent">
+            <option value="low">Low (mild symptoms)</option>
+            <option value="medium">Medium (moderate symptoms)</option>
+            <option value="high">High (severe symptoms)</option>
+          </select>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="flex justify-center">
+          <button type="submit" class="bg-red-600 text-white font-semibold py-3 px-8 rounded-lg hover:bg-red-700 focus:outline-none focus:ring-4 focus:ring-red-600">Submit Report</button>
+        </div>
+
+      </form>
+      <!-- Form End -->
+
+    </div>
+  </div>
+</section>
+
+<!-- Note Section: Importance of Snakes -->
+<section class="bg-yellow-50 py-12">
+  <div class="container mx-auto px-6 lg:px-12">
+    <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-xl p-8">
+      <h2 class="md:text-3xl text-xl font-bold text-center text-yellow-400 mb-6">Why Snakes are Important to Us</h2>
+      <p class="text-gray-700 md:text-lg">
+        Snakes play a vital role in maintaining the balance of ecosystems. Here are a few reasons why they are crucial:
+      </p>
+
+      <ul class="list-disc mt-4 ml-8 text-gray-600 space-y-4">
+        <li><span class="font-semibold">Pest Control:</span> Snakes help regulate populations of rodents and other small mammals, preventing the spread of diseases and damage to crops.</li>
+        <li><span class="font-semibold">Food Chain:</span> Snakes are both predators and prey, contributing to the balance of various food webs. They feed on pests and in turn are food for birds, mammals, and other larger predators.</li>
+        <li><span class="font-semibold">Biodiversity:</span> The presence of snakes in an ecosystem is an indicator of biodiversity and a healthy environment.</li>
+        <li><span class="font-semibold">Medical Advancements:</span> Snake venom has been used in medical research to develop treatments for heart disease, blood clots, and cancer.</li>
+      </ul>
+
+      <p class="text-gray-700 mt-6">
+        It is important to remember that snakes contribute significantly to our world and deserve respect and protection. While their bites can be dangerous, they generally avoid humans unless provoked.
+      </p>
+
+      <div class="mt-8 text-center">
+        <blockquote class="italic text-yellow-400 text-bold text-gray-500">
+          "A world without snakes would be a world overrun with pests. They are nature’s pest control and a crucial part of the balance."
+        </blockquote>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-white py-6">
+      <div class="container mx-auto px-6 lg:px-12">
+        <div class="flex flex-col gap-3 items-center">
+          <p>&copy; 2025 Snakebite Portal. All rights reserved.</p>
+          <div class="flex space-x-4">
+            <a href="#" class="fa fa-facebook hover:text-gray-400"></a>
+            <a href="#" class="fa fa-twitter hover:text-gray-400"></a>
+            <a href="#" class="fa fa-instagram hover:text-gray-400"></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Toggle mobile menu
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>
